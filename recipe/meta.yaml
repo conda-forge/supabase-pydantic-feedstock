@@ -1,5 +1,5 @@
 {% set name = "supabase-pydantic" %}
-{% set version = "0.14.0" %}
+{% set version = "0.15.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/supabase_pydantic-{{ version }}.tar.gz
-  sha256: 8fa21e2041537c9a997812a0b885999c0b2c6571055e0ca2c95706a1674077b3
+  sha256: 6ae5e938028653898da8afe27f537264e3054a8444ae5bf52f8ae6be312a8bf7
 
 build:
   entry_points:
@@ -23,7 +23,7 @@ requirements:
     - poetry-core
     - pip
   run:
-    - python >=3.10.0,<4.0.0
+    - python >=3.10,<4.0
     - psycopg2-binary >=2.9.9,<3.0.0
     - pydantic >=2.6.3,<3.0.0
     - types-psycopg2 >=2.9.21,<3.0.0
@@ -32,7 +32,7 @@ requirements:
     - python-dotenv >=1.0.1,<2.0.0
     - click >=8.1.7,<9.0.0
     - toml >=0.10.2,<0.11.0
-    - ruff >=0.4.1,<0.5.0
+    - jinja2 >=3.1.5,<3.2.0
     - click-option-group >=0.5.6,<0.6.0
 
 test:
@@ -49,8 +49,9 @@ about:
   home: https://github.com/kmbhm1/supabase-pydantic
   summary: A Pydantic(+) model generator for Supabase
   license: MIT
-  license_family: MIT
   license_file: LICENSE
+  doc_url: https://kmbhm1.github.io/supabase-pydantic
+  dev_url: https://github.com/kmbhm1/supabase-pydantic
 
 extra:
   recipe-maintainers:
