@@ -9,6 +9,10 @@ Package license: MIT
 
 Summary: A Pydantic(+) model generator for Supabase
 
+Development: https://github.com/kmbhm1/supabase-pydantic
+
+Documentation: https://kmbhm1.github.io/supabase-pydantic
+
 Current build status
 ====================
 
