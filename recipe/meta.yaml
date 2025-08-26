@@ -1,6 +1,6 @@
 {% set python_min = "3.10.0" %}
 {% set name = "supabase-pydantic" %}
-{% set version = "0.23.0" %}
+{% set version = "0.24.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/supabase_pydantic-{{ version }}.tar.gz
-  sha256: 992d73699bf42e9fd79ff1e5d24d1385cd73dfc96c30a0cb74e67683097cf747
+  sha256: 0fe471436587fafad00e8bafa388233c1ca8c454669eae05c55dbd004f0a5ac2
 
 build:
   entry_points:
@@ -24,17 +24,22 @@ requirements:
     - poetry-core
     - pip
   run:
-    - python >={{ python_min }},<4.0.0
+    - python >={{ python_min }},<3.14.0
     - psycopg2-binary >=2.9.9,<3.0.0
     - pydantic >=2.6.3,<3.0.0
     - types-psycopg2 >=2.9.21,<3.0.0
     - faker >=24.11.0,<25.0.0
-    - isort >=5.13.2,<6.0.0
     - python-dotenv >=1.0.1,<2.0.0
     - click >=8.1.7,<9.0.0
     - toml >=0.10.2,<0.11.0
-    - jinja2 >=3.1.5,<3.2.0
     - click-option-group >=0.5.6,<0.6.0
+    - inflection >=0.5.1,<0.6.0
+    - requests >=2.32.4
+    - urllib3 >=2.5.0,<3.0.0
+    - loguru >=0.7.2,<0.8.0
+    - mysql-connector-python >=9.4.0,<10.0.0
+    - isort >=5.13.2,<6.0.0
+    - jinja2 >=3.1.5,<3.2.0
 
 test:
   imports:
