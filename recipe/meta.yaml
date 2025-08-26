@@ -1,6 +1,6 @@
 {% set python_min = "3.10.0" %}
 {% set name = "supabase-pydantic" %}
-{% set version = "0.24.1" %}
+{% set version = "0.24.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/supabase_pydantic-{{ version }}.tar.gz
-  sha256: 0fe471436587fafad00e8bafa388233c1ca8c454669eae05c55dbd004f0a5ac2
+  sha256: 3a1915b510d2eae310ae03509124a62d315a3fcb5bf03f62e084be38b8554765
 
 build:
   entry_points:
@@ -37,7 +37,7 @@ requirements:
     - requests >=2.32.4
     - urllib3 >=2.5.0,<3.0.0
     - loguru >=0.7.2,<0.8.0
-    - mysql-connector-python >=8.0.32
+    - mysql-connector-python = ">=8.0.32,<9.4.0"
     - isort >=5.13.2,<6.0.0
     - jinja2 >=3.1.5,<3.2.0
 
