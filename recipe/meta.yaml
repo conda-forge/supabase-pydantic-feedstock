@@ -1,6 +1,6 @@
 {% set python_min = "3.10.0" %}
 {% set name = "supabase-pydantic" %}
-{% set version = "0.26.18" %}
+{% set version = "0.26.19" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/supabase_pydantic-{{ version }}.tar.gz
-  sha256: 46b661afbac86298508151ab976f7205fcb32d0b3ac4e50fb75b1b64510864d5
+  sha256: bbe70c05ec1b56c1122b77ec5d5a255205b6a433cc1f6af85d0409631c224a31
 
 build:
   entry_points:
